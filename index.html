@@ -1,0 +1,185 @@
+<!doctype html>
+<html>
+ <head> 
+  <meta charset="UTF-8"> 
+  <title>Cake Web</title> 
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous"> 
+  
+  <link rel="stylesheet"href="style.css">
+ </head> 
+ <body> 
+  <!--container----------> 
+  <div class="Container"> 
+   <div class="Logo"> 
+    <img src="image/logo.svg"> 
+   </div> 
+   <div class="Menu-bar"> 
+    <ul> 
+     <li>Home</li> 
+     <a href="#about"> <li>About</li> </a> 
+     <a href="#store"><li>Store</li></a> 
+    </ul> 
+   </div> 
+   <!--cart section-------> 
+   <div class="cart-menu"> 
+    <div class="cart-icon"> 
+     <i class="fas fa-bars" onclick="cart_bar()" id="fa-bar"></i> 
+    </div> 
+    <div class="cart-items" id="cart"> 
+     <div class="cart-close"> 
+      <i class="fas fa-window-close" onclick="close_cart()" id="close"></i> 
+     </div> 
+     <h2>Your Cart</h2> 
+     <div class="items" id="items"> 
+     </div> 
+    </div> 
+   </div> 
+   <!--container_End------> 
+   <!--header----------> 
+   <div class="header"> 
+    <div class="bg-header"> 
+     <div id="text"> 
+      <h2>Welcome to <span>Yummy Bakery</span> </h2> 
+      <button>Go To Store</button> 
+     </div> 
+    </div> 
+   </div> 
+   <!--header_End-------> 
+   <!--about------------> 
+   <div class="About-box" id="about"> 
+    <div class="about-text"> 
+     <h1>About Us</h1> 
+     <p>Cake is a form of sweet food made from flour, sugar, and other ingredients, that is usually baked. In their oldest forms, cakes were modifications of bread, but cakes now cover a wide range of preparations that can be simple or elaborate, and that share features with other desserts such as pastries, meringues, custards, and pies. <span id="dots">......</span> </p> 
+     <p id="read-more"> The most commonly used cake ingredients include flour, sugar, eggs, butter or oil or margarine, a liquid, and leavening agents, such as baking soda or baking powder. </p> 
+     <div class="btn-read"> 
+      <button id="btn-more" onclick="readmore()">Explore</button> 
+     </div> 
+    </div> 
+    <span id="slide-img"> </span> 
+   </div> 
+   <!--about_End----------> 
+   <!--search----------> 
+   <div class="search-items" id="search"> 
+    <h1>Search Items</h1> 
+    <input type="text" id="search-box"> 
+    <div class="options"> 
+     <ul> 
+      <li>CupCake</li> 
+      <li>Doughnut</li> 
+      <li>Cake</li> 
+      <li>Sweet</li> 
+     </ul> 
+    </div> 
+   </div> 
+   <!--search_End---------> 
+   <!--items-----------> 
+   <section class="products" id="store"> 
+    <div class="container-center"> 
+     <article> 
+      <div class="img-container"> 
+       <img src="image/cake-1.jpeg" alt="cake1" class="item-img"> 
+       <button class="bag-btn" id="0" onclick="AddCart(this)"> <i class="fa fa-shopping-cart"> Add cart </i> </button> 
+      </div> 
+      <h3>chocolate cake</h3> 
+      <h4>50$</h4> 
+     </article> 
+     <article> 
+      <div class="img-container"> 
+       <img src="image/cake-2.jpeg" alt="cake1" class="item-img"> 
+       <button class="bag-btn" id="1" onclick="AddCart(this)"> <i class="fa fa-shopping-cart"> Add cart </i> </button> 
+      </div> 
+      <h3>vanilla cake </h3> 
+      <h4>40$</h4> 
+     </article> 
+     <article> 
+      <div class="img-container"> 
+       <img src="image/cake-3.jpeg" alt="cake1" class="item-img"> 
+       <button class="bag-btn" id="2" onclick="AddCart(this)"> <i class="fa fa-shopping-cart"> Add cart </i> </button> 
+      </div> 
+      <h3>strawberry cake </h3> 
+      <h4>60$</h4> 
+     </article> 
+     <article> 
+      <div class="img-container"> 
+       <img src="image/doughnut-3.jpeg" alt="cake1" class="item-img"> 
+       <button class="bag-btn" id="3" onclick="AddCart(this)"> <i class="fa fa-shopping-cart"> Add cart </i> </button> 
+      </div> 
+      <h3>chocolate donut </h3> 
+      <h4>28$</h4> 
+     </article> 
+     <article> 
+      <div class="img-container"> 
+       <img src="image/doughnut-2.jpeg" alt="cake1" class="item-img"> 
+       <button class="bag-btn" id="4" onclick="AddCart(this)"> <i class="fa fa-shopping-cart"> Add cart </i> </button> 
+      </div> 
+      <h3>doughnut mix </h3> 
+      <h4>30$</h4> 
+     </article> 
+     <article> 
+      <div class="img-container"> 
+       <img src="image/doughnut-1.jpeg" alt="cake1" class="item-img"> 
+       <button class="bag-btn" id="5" onclick="AddCart(this)"> <i class="fa fa-shopping-cart"> Add cart </i> </button> 
+      </div> 
+      <h3>creamy doughnut </h3> 
+      <h4>25$</h4> 
+     </article> 
+     <article> 
+      <div class="img-container"> 
+       <img src="image/sweets-1.jpeg" alt="cake1" class="item-img"> 
+       <button class="bag-btn" id="6" onclick="AddCart(this)"> <i class="fa fa-shopping-cart"> Add cart </i> </button> 
+      </div> 
+      <h3>Burger cake </h3> 
+      <h4>22$</h4> 
+     </article> 
+     <article> 
+      <div class="img-container"> 
+       <img src="image/sweets-2.jpeg" alt="cake1" class="item-img"> 
+       <button class="bag-btn" id="7" onclick="AddCart(this)"> <i class="fa fa-shopping-cart"> Add cart </i> </button> 
+      </div> 
+      <h3>crunch cake </h3> 
+      <h4>25$</h4> 
+     </article> 
+     <article> 
+      <div class="img-container"> 
+       <img src="image/sweets-3.jpeg" alt="cake1" class="item-img"> 
+       <button class="bag-btn" id="8" onclick="AddCart(this)"> <i class="fa fa-shopping-cart"> Add cart </i> </button> 
+      </div> 
+      <h3>chocolate </h3> 
+      <h4>20$</h4> 
+     </article> 
+     <article> 
+      <div class="img-container"> 
+       <img src="image/cupcake-3.jpeg" alt="cake1" class="item-img"> 
+       <button class="bag-btn" id="9" onclick="AddCart(this)"> <i class="fa fa-shopping-cart"> Add cart </i> </button> 
+      </div> 
+      <h3> blueberry cupcake</h3> 
+      <h4>22$</h4> 
+     </article> 
+     <article> 
+      <div class="img-container"> 
+       <img src="image/cupcake-2.jpeg" alt="cake1" class="item-img"> 
+       <button class="bag-btn" id="10" onclick="AddCart(this)"> <i class="fa fa-shopping-cart"> Add cart </i> </button> 
+      </div> 
+      <h3>chocolate cupcake</h3> 
+      <h4>18$</h4> 
+     </article> 
+     <article> 
+      <div class="img-container"> 
+       <img src="image/cupcake-1.jpeg" alt="cake1" class="item-img"> 
+       <button class="bag-btn" id="11" onclick="AddCart(this)"> <i class="fa fa-shopping-cart"> Add cart </i> </button> 
+      </div> 
+      <h3>banana cupcake</h3> 
+      <h4>15$</h4> 
+     </article> 
+    </div> 
+   </section> 
+   <!--items_End-------> 
+   <!--Footer---------> 
+   <div class="footer"> 
+    <h1></h1> 
+   </div> 
+   <!--End_Footer---------> 
+  </div>
+  <script src="script.js"></script>
+ </body>
+</html>
