@@ -78,28 +78,28 @@ function close_cart(){
 //-----------AddCart----------//
     
     var cartDataBase={
-    "0":{"img":"image/cake-1.jpeg", "name":"Chocolate Cake","price":'50$' },
-   "1":{ "img":"image/cake-2.jpeg","name":"Vanilla Cake","price":'40$' },
-   "2":{ "img":"image/cake-3.jpeg","name":"strawberry Cake", "price":'60$'},
+    "0":{"img":"image/cake-1.jpeg", "name":"Chocolate Cake","price":'50$',"Add":false },
+   "1":{ "img":"image/cake-2.jpeg","name":"Vanilla Cake","price":'40$',"Add":false},
+   "2":{ "img":"image/cake-3.jpeg","name":"strawberry Cake", "price":'60$',"Add":false},
     
-    "11":{"img":"image/cupcake-1.jpeg", "name":"Banana Cupcake","price":'15$' },
-    "10":{ "img":"image/cupcake-2.jpeg","name":"Chocolate Cupcake","price":'18$' },
-   "9":{ "img":"image/cupcake-3.jpeg","name":"blueberry cupcake", "price":'22$'},
-    
-    
-   "8":{"img":"image/sweets-3.jpeg", "name":"chocolate","price":'20$' },
-   "7":{ "img":"image/sweets-2.jpeg","name":"crunch Cake","price":'25$' },
-   "6":{ "img":"image/sweets-1.jpeg","name":"Burger Cake", "price":'$22'},
+    "11":{"img":"image/cupcake-1.jpeg", "name":"Banana Cupcake","price":'15$',"Add":false},
+    "10":{ "img":"image/cupcake-2.jpeg","name":"Chocolate Cupcake","price":'18$',"Add":false },
+   "9":{ "img":"image/cupcake-3.jpeg","name":"blueberry cupcake", "price":'22$',"Add":false},
     
     
-    "3":{"img":"image/doughnut-3.jpeg", "name":"chocolate Donut","price":'28$' },
-    "4":{ "img":"image/doughnut-2.jpeg","name":" Doughnut Mix","price":'30$' },
-   "5":{ "img":"image/doughnut-1.jpeg","name":"Creamy Doughnut", "price":'$25'},
+   "8":{"img":"image/sweets-3.jpeg", "name":"chocolate","price":'20$',"Add":false },
+   "7":{ "img":"image/sweets-2.jpeg","name":"crunch Cake","price":'25$',"Add":false },
+   "6":{ "img":"image/sweets-1.jpeg","name":"Burger Cake", "price":'$22',"Add":false},
+    
+    
+    "3":{"img":"image/doughnut-3.jpeg", "name":"chocolate Donut","price":'28$',"Add":false },
+    "4":{ "img":"image/doughnut-2.jpeg","name":" Doughnut Mix","price":'30$',"Add":false },
+   "5":{ "img":"image/doughnut-1.jpeg","name":"Creamy Doughnut", "price":'$25',"Add":false},
     
  }
- var div=document.getElementById("items");
  
-/*document.getElementsByClass("bag-btn").addEventListener("click", AddCart);*/
+var div=document.getElementById("items");
+ 
  
  //-----cartFunction----//
  
@@ -108,8 +108,11 @@ function AddCart(cartAdd){
 var image=cartDataBase[index].img;
   var name=cartDataBase[index].name;
   var price=cartDataBase[index].price;
-   alert(name+" added")
+var add=cartDataBase[index].Add
   
+ if(add==false){
+   alert(name+" added")
+   
   var img=document.createElement('img');
   var h3=document.createElement('h3');
   var h2=document.createElement('h2');
@@ -124,6 +127,11 @@ var image=cartDataBase[index].img;
   h2.style.left="50px";
   h3.style.top="-115px";
   h3.style.left="180px";
-    
+ 
+
+   }else{
+       alert("Already added in your cart");
+   } 
+  add=cartDataBase[index].Add=true;
     
 }
